@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Rohit</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div class="topbar">
+<a href="index.html" class="name">Rohit Shaw</a>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="index.html#projects">Projects</a>
+<a href="index.html#skills">Skills</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+
+<div class="content">
+<div class="form-area">
+<p class="small">Contact</p>
+<h1>Message me</h1>
+<p>If you wanna talk or have any question just drop it here. I'll reply when I see it.</p>
+
+<form id="f">
+<label>Name</label>
+<input type="text" id="n" required>
+
+<label>Email</label>
+<input type="email" id="e" required>
+
+<label>Your message</label>
+<textarea id="m" rows="5" required></textarea>
+
+<button type="submit">Send</button>
+<p id="msg"></p>
+</form>
+</div>
+</div>
+
+<div class="bottom">
+Rohit Shaw &nbsp;|&nbsp; Shawr5104@gmail.com
+</div>
+
+<script>
+document.getElementById("f").onsubmit = function(e) {
+e.preventDefault();
+var n = document.getElementById("n").value;
+if(n) document.getElementById("msg").innerHTML = "Thanks " + n + ". Got it, will reply soon.";
+this.reset();
+}
+</script>
+
+</body>
+</html>
